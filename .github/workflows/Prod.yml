@@ -33,7 +33,7 @@ jobs:
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_SSH_KEY }}
+          key: ${{ secrets.SSH_KEY }}
           script: |
             sudo docker stop devops-tp3 || true
             sudo docker rm devops-tp3 || true
