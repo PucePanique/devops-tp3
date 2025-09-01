@@ -35,7 +35,7 @@ jobs:
 
       - name: Deploy via SSH with password
         run: |
-          sshpass -p "${{ secrets.VPS_PWD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} \
+          sshpass -p ${{ secrets.VPS_PWD }} ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} \
           "docker stop devops-tp3 || true &&
           docker rm devops-tp3 || true &&
           docker pull ${{ secrets.DOCKER_NAME }}/devops-tp3:latest &&
