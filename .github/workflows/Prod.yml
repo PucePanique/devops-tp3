@@ -38,5 +38,5 @@ jobs:
             sudo docker stop devops-tp3 || true
             sudo docker rm devops-tp3 || true
             sudo docker pull ${{ secrets.DOCKER_NAME }}/devops-tp3:latest
-            sudo docker run -d --name devops-tp3 -p 80:80 ${{ secrets.DOCKER_NAME }}/devops-tp3:latest
+            sudo docker run -d  -p 80:80 ${{ secrets.DOCKER_NAME }}/devops-tp3:latest
 
