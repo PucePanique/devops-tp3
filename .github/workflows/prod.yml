@@ -6,22 +6,6 @@ on:
       - main
 
 jobs:
-  say-hello:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout du code
-        uses: actions/checkout@v3
-
-      - name: Echo Hello Prod
-        run: echo "Hello Prod"
-  say-good-by:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout du code
-        uses: actions/checkout@v3
-
-      - name: Echo Good by
-        run: echo "Good-by"
   build-and-push:
     runs-on: ubuntu-latest
     steps:
