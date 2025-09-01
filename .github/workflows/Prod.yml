@@ -36,8 +36,8 @@ jobs:
       - name: Deploy via SSH with password
         run: |
           sshpass -p "${{ secrets.VPS_PWD }}" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "${{ secrets.VPS_USER }}"@"${{ secrets.VPS_HOST }}" \
-          "docker stop ${{ secrets.DOCKER_NAME }}/devops-tp3 || true &&
-          docker rm ${{ secrets.DOCKER_NAME }}/devops-tp3 || true &&
-          docker pull ${{ secrets.DOCKER_NAME }}/devops-tp3:latest &&
-          docker run -d --name ${{ secrets.DOCKER_NAME }}/devops-tp3 -p 80:80 ${{ secrets.DOCKER_NAME }}/devops-tp3:latest"
+          "sudo docker stop ${{ secrets.DOCKER_NAME }}/devops-tp3 || true &&
+          sudo docker rm ${{ secrets.DOCKER_NAME }}/devops-tp3 || true &&
+          sudo docker pull ${{ secrets.DOCKER_NAME }}/devops-tp3:latest &&
+          sudo docker run -d --name ${{ secrets.DOCKER_NAME }}/devops-tp3 -p 80:80 ${{ secrets.DOCKER_NAME }}/devops-tp3:latest"
 
