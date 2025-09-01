@@ -3,7 +3,7 @@ name: Hello World CI
 on:
   push:
     branches:
-      - main
+      - Prod
 
 jobs:
   build-and-push:
